@@ -37,7 +37,7 @@ namespace Dızıler.GaziKazan.Myo
             //{
             //    Console.WriteLine(dizi[i]);
             //}
-            int toplam = 0;
+            double toplam = 0;
             
             Console.WriteLine("Kaç tane sayı  giriceksiniz");
             int sayi = int.Parse(Console.ReadLine());
