@@ -22,23 +22,43 @@ namespace Dızıler.GaziKazan.Myo
             //{
             //    Console.WriteLine(dizi[i]);
             //}
+
+            //Console.WriteLine("Kaç tane isim giriceksiniz");
+            //int sayi = int.Parse(Console.ReadLine());
+            //string[] dizi = new string[sayi];
+
+            //for (int i = 0; i < dizi.Length; i++)
+            //    {
+            //        Console.WriteLine($"{i+1}.isimi diziniz");
+            //           dizi[i] = Console.ReadLine();
+            //    }
+            //Array.Sort(dizi);
+            //for (int i = 0; i < dizi.Length; i++)
+            //{
+            //    Console.WriteLine(dizi[i]);
+            //}
+            int toplam = 0;
             
-            Console.WriteLine("Kaç tane isim giriceksiniz");
+            Console.WriteLine("Kaç tane sayı  giriceksiniz");
             int sayi = int.Parse(Console.ReadLine());
-            string[] dizi = new string[sayi];
-            
-            for (int i = 0; i < dizi.Length; i++)
-                {
-                    Console.WriteLine($"{i+1}.isimi giriniz");
-                       dizi[i] = Console.ReadLine();
-                }
-            Array.Sort(dizi);
-            for (int i = 0; i < dizi.Length; i++)
+            int[] sayılar = new int[sayi];
+            for (int i = 0; i < sayılar.Length; i++)
             {
-                Console.WriteLine(dizi[i]);
+                
+                Console.WriteLine($"{i + 1}.sayıyı giriniz");
+                sayılar[i] = int.Parse(Console.ReadLine());
+                toplam += sayılar[i];
             }
-            
-            
+            Array.Sort(sayılar);
+            for (int i = 0; i < sayılar.Length; i++)
+            {
+
+                Console.WriteLine(sayılar[i]);
+
+            }
+            Console.WriteLine($"Ortalama:{toplam/sayi}");    
+
+
             Console.ReadKey();
         }
     }
